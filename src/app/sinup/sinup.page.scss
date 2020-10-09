@@ -1,0 +1,205 @@
+.main{
+    background: #000;
+    height: 100vh;
+    padding: 15px calc(-46.622px + 18.243vw) 5px calc(-46.622px + 18.243vw);
+    header{
+        h2{
+            font-weight: 300;
+            font-size: 35px;
+        }
+        display: flex;
+        justify-content: space-between;
+        svg{
+            width: 25px;   
+            fill: #fff;
+            cursor: pointer;
+            &:hover{
+                animation: movimenta 1s infinite;
+            } 
+        }
+    }
+}
+a{
+    text-decoration: none;
+}
+@keyframes movimenta{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+input{
+    padding: 10px;  
+    color: grey;
+}
+#email{
+    grid-area: login;
+    margin-bottom: 15px;
+}
+#senha{
+    grid-area: senha;
+}
+small{
+    margin-top: 3px;
+    grid-area: recupera;
+}
+form{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 100% ;
+grid-template:  "formStyle formStyle"
+                "recupera recupera"
+                "botao botao"
+                ;
+}
+.btnLogin{
+    grid-area: botao;
+    background: darkslateblue;
+    color:#fff;
+    &:hover{
+      background:rgb(52, 45, 102);
+    }
+    
+}
+button{
+    border-radius: 10px;
+    width: 45%;
+    justify-self: flex-end;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
+    border:none;
+    transition: all .3s ease-in-out;
+    outline: none;
+    &:focus{
+      animation: cresce 1s alternate;
+    }
+  }
+  @keyframes cresce{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+ 
+  div.form-estilisado {
+    grid-area: formStyle;
+    height: 360px;
+    display: flex;
+    justify-content: space-around;
+    // align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+div.form-estilisado div.form {
+    widows: 50%;
+    position: relative;
+    height: 50px;
+    overflow: unset;
+}
+input {
+    width: 100%;
+    height: 100%;
+    color: brown!important;
+    padding-top: 17px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+div.form-estilisado .form label {
+    position: absolute;
+    bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: grey;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    // border-bottom: 1px solid black;
+    background: transparent;
+}
+.form label::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    left: -20px;
+    bottom: -16px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid darkslateblue;
+    transform: translatex(-100%);
+    -webkit-transform: translatex(-100%);
+    -moz-transform: translatex(-100%);
+    -ms-transform: translatex(-100%);
+    -o-transform: translatex(-100%);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.form .content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    background-color: #fff;
+}
+.form input:focus+.label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    -webkit-transform: translateY(-150%);
+    -moz-transform: translateY(-150%);
+    -ms-transform: translateY(-150%);
+    -o-transform: translateY(-150%);
+    font-size: 14px;
+    color: darkslateblue;
+}
+.form input:focus+.label-name::after,
+.form input:valid+.label-name::after {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    opacity: 1;
+    animation: aparece .1s;
+}
+@keyframes aparece{
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+hr{
+    grid-area: hr;
+    height: 2px;
+    width: 60%;
+    border-radius: 3px;
+    background: rgb(102, 102, 102);
+    align-self: flex-end;
+    position: absolute;
+    bottom: 15px;
+    left: 20%;
+  }

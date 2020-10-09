@@ -1,3 +1,4 @@
+
 #container {
   text-align: center;
 
@@ -24,4 +25,119 @@
 
 #container a {
   text-decoration: none;
+}
+.main{
+  background: url('../../assets/fundoHome.jpg') 0 0 /100% 100%  no-repeat; 
+  width: 100vw;
+  height: 100vh;
+  padding: 50px calc(-46.622px + 18.243vw) 5px calc(-46.622px + 18.243vw);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 23vh 23vh 23vh 23vh 8vh;
+  grid-template: "nome nome"
+                  "img img"
+                  "autor autor"
+                  "buttons buttons"
+                  "hr hr";
+}
+.NomeLogo{
+  grid-area: nome;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 38px;
+  align-self: flex-end;
+  position: relative;
+  top:15px;
+}
+.ImagemLogo{
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  grid-area: img;
+  svg{
+    width: 170px;
+    fill: aliceblue;
+    stroke: grey;
+  }
+}
+.autor{
+  display: flex;
+  align-self: center;
+  grid-area: autor;
+  position: relative;
+  top: 25px;
+  color: darkgray;
+  .titleAutor small:last-child{
+    position: relative; 
+    top: -2px;
+    font-size: 10px;
+    font-weight: 300;
+    
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    justify-content: flex-end;
+  }
+  img{
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+    align-self: flex-end;
+  }
+}
+.login{
+  background: darkslateblue;
+  color:#fff;
+  &:hover{
+    background:rgb(52, 45, 102);
+  }
+}
+.cadastre-se{
+  color:#fff;
+  background: deeppink;
+  &:hover{
+    background: rgb(167, 15, 96);
+  }
+}
+hr{
+  grid-area: hr;
+  height: 2px;
+  width: 60%;
+  border-radius: 3px;
+  background: rgb(102, 102, 102);
+  align-self: flex-end;
+}
+button{
+  border-radius: 10px;
+  width: 45%;
+  height: 45px;
+  font-size: 15px;
+  font-weight: 600;
+  border:none;
+  transition: all .3s ease-in-out;
+  outline: none;
+  &:focus{
+    animation: cresce 1s alternate;
+  }
+}
+@keyframes cresce{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.buttons{
+  width: 100%!important;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  grid-area: buttons;
 }
