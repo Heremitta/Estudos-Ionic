@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'sinup',
     loadChildren: () => import('./sinup/sinup.module').then( m => m.SinupPageModule)
   },
+  {
+    path: 'painel',
+    loadChildren: () => import('./painel/painel.module').then( m => m.PainelPageModule)
+  },
 ];
 
 @NgModule({

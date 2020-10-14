@@ -40,7 +40,7 @@
                   "buttons buttons"
                   "hr hr";
 }
-.NomeLogo{
+.NomeLogo {
   grid-area: nome;
   display: flex;
   justify-content: center;
@@ -49,12 +49,15 @@
   align-self: flex-end;
   position: relative;
   top:15px;
+  user-select: none;
+  cursor: inherit;
 }
 .ImagemLogo{
   display: flex;
   align-self: flex-start;
   justify-content: center;
   grid-area: img;
+  pointer-events: none;
   svg{
     width: 170px;
     fill: aliceblue;
@@ -68,6 +71,9 @@
   position: relative;
   top: 25px;
   color: darkgray;
+  pointer-events: none;
+  user-select: none;
+  
   .titleAutor small:last-child{
     position: relative; 
     top: -2px;
@@ -119,6 +125,7 @@ button{
   border:none;
   transition: all .3s ease-in-out;
   outline: none;
+  user-select: none;
   &:focus{
     animation: cresce 1s alternate;
   }

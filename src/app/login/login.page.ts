@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
 import { FormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Globais } from '../globais';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -10,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class LoginPage implements OnInit {
   public submitted = false;
   public form: FormGroup;
-  constructor(private _location: Location) { }
+  constructor(private _location: Location,private router: Router) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -28,11 +31,14 @@ export class LoginPage implements OnInit {
   voltar(){
     this._location.back();
   }
-  logar(e: Event){
+  logar(){
     this.submitted=true;
+    localStorage.setItem('logado', 'true')
+    this.router.navigate(['/painel'])
   }
 
-  msg(m: string){
+  msg(m: string, event?){
+    event?event.preventDefault(): '';
     alert(m);
   }
 }

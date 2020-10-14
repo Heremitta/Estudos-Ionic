@@ -18,20 +18,20 @@
   <form > 
 	<div class="form-estilisado">
 		<div class="form">
-			<input type="text" name="nome" autocomplete="off" required>
+			<input type="text" name="nome"  required>
 			<label for="name" class="label-name">
 				<span class="content-name">E-mail</span>
 			</label>
 		</div>
 		<div class="form">
-			<input type="text" name="nome" autocomplete="off" required>
+			<input type="password" autocomplete="false" name="nome"  required>
 			<label for="name" class="label-name">
 				<span class="content-name">Senha</span>
 			</label>
 		</div>
 	  </div>
-			<small (click)="msg('impossivel recuperar a senha sem programar esta função antes!')">Recuperar senha, <a href="#"> clique aqui</a></small>	
-		<button class="btnLogin" (click)="msg('impossivel Logar sem programar esta função antes!')">Enter</button>
+			<small (click)="msg('impossivel recuperar a senha sem programar esta função antes!',$event)">Recuperar senha, <a href="/login"> clique aqui</a></small>	
+		<button class="btnLogin" (click)="logar()">Enter</button>
 	</form>
 	<hr>
 </div>

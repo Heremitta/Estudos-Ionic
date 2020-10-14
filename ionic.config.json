@@ -1,5 +1,7 @@
 {
   "name": "login-cadastro",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

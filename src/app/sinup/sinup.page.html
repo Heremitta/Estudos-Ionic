@@ -15,41 +15,43 @@
 </g>
 </svg>
   </header>
-  <form > 
-    <div class="form-estilisado">
-      <div class="form">
-        <input type="text" name="nome" autocomplete="off" required autocomplete="off">
-        <label for="name" class="label-name">
-          <span class="content-name">Nome</span>
-        </label>
+  <div class="conteudo">
+    <form > 
+      <div class="form-estilisado">
+        <div class="form">
+          <input type="text" name="nome" autocomplete="false" required >
+          <label for="name" class="label-name">
+            <span class="content-name">Nome</span>
+          </label>
+        </div>
+        <div class="form">
+          <input type="text" name="email" autocomplete="false" required >
+          <label for="email" class="label-name">
+            <span class="content-name">E-mail</span>
+          </label>
+        </div>
+        <div class="form">
+          <input type="text" name="confir" autocomplete="false" required >
+          <label for="confir" class="label-name">
+            <span class="content-name">Repita o E-mail</span>
+          </label>
+        </div>
+        <div class="form">
+          <input type="text" name="Asenha" autocomplete="false" required >
+          <label for="Asenha" class="label-name">
+            <span class="content-name">Senha</span>
+          </label>
+        </div>
+        <div class="form">
+          <input type="text" name="confirmesenha" autocomplete="false" required>
+          <label for="confirmesenha" class="label-name">
+            <span class="content-name">Repita a Senha</span>
+          </label>
+        </div>
       </div>
-      <div class="form">
-        <input type="text" name="email" autocomplete="off" required autocomplete="off">
-        <label for="email" class="label-name">
-          <span class="content-name">E-mail</span>
-        </label>
-      </div>
-      <div class="form">
-        <input type="text" name="confirmaemail" autocomplete="off" required autocomplete="off">
-        <label for="confirmaemail" class="label-name">
-          <span class="content-name">Confirme o E-mail</span>
-        </label>
-      </div>
-      <div class="form">
-        <input type="text" name="senha" autocomplete="off" required autocomplete="off">
-        <label for="senha" class="label-name">
-          <span class="content-name">Senha</span>
-        </label>
-      </div>
-      <div class="form">
-        <input type="text" name="confirmesenha" autocomplete="off" required autocomplete="off">
-        <label for="confirmesenha" class="label-name">
-          <span class="content-name">Confirme a Senha</span>
-        </label>
-      </div>
-    </div>
-        
-      <button class="btnLogin" (click)="msg('impossivel Logar sem programar esta função antes!')">Cadastrar</button>
-	</form>
-  <hr>
+          
+        <button class="btnLogin" (click)="msg('impossivel Logar sem programar esta função antes!')">Cadastrar</button>
+    </form>
+    <hr>
+  </div>
 </div>
